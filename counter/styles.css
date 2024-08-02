@@ -1,0 +1,82 @@
+/* Reset some basic styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+#value {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.decrease {
+  background-color: #e74c3c;
+}
+
+.decrease:hover {
+  background-color: #c0392b;
+}
+
+.reset {
+  background-color: #f39c12;
+}
+
+.reset:hover {
+  background-color: #e67e22;
+}
+
+.increase {
+  background-color: #27ae60;
+}
+
+.increase:hover {
+  background-color: #2ecc71;
+}
