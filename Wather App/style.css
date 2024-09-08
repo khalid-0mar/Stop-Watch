@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: rgb(236, 241, 250);
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  background-image: url("images/london-city.jpeg");
+  background-size: cover;
+  background-position: top center;
+  height: 100vh; /* Make body take the full height of the viewport */
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+}
+
+.app-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the search box inside app-wrap */
+  align-items: center;
+  background-image: linear-gradient(
+    o bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.6)
+  );
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px 15px;
+}
+
+header input {
+  width: 100%;
+  max-width: 900px; /* Increase the width slightly */
+  padding: 20px; /* Increase padding */
+  border: none;
+  outline: none;
+  background-color: rgba(139, 134, 134, 0.3);
+  border-radius: 16px 0px 16px 0px;
+  border-bottom: 3px solid #df8e00;
+  color: #f8f2f2;
+  font-size: 20px;
+  font-weight: 300;
+  transition: 0.2s ease-out;
+}
+
+header input:focus {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.search-box {
+  font-size: 50px; /* Set the same font size for input text */
+  padding: 20px;
+
+  color: #000; /* Ensure visible color */
+}
+/* Change placeholder font size */
+.search-box::placeholder {
+  font-size: 40px; /* Adjust the size as needed */
+  color: #888; /* You can change the placeholder color too */
+  opacity: 2; /* Ensure the placeholder is fully visible */
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+main {
+  flex: 1 1 100%;
+  padding: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.location .city {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.location .date {
+  color: #fff;
+  font-size: 90px;
+}
+.current .temp {
+  color: #fff;
+  font-size: 102px;
+  font-weight: 900;
+  margin: 30px 0px;
+  text-shadow: 2px 10px rgb(0, 0, 0, 0.75);
+}
+.current .temp span {
+  font-weight: 500;
+}
+.current .weather {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-shadow: 0px 3px rgb(0, 0, 0, 0.4);
+}
+.current.hi-low {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0px 4px rgb(0, 0, 0, 0.4);
+}

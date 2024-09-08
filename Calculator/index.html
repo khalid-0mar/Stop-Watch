@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="calculator">
-      <input id="display" readonly />
+      <input id="display" readonly value="0" />
       <div id="keys">
         <button id="add" onclick="appendToDisplay('+')" class="operator-btn">
           +
@@ -39,10 +39,10 @@
         <button id="divide" onclick="appendToDisplay('/')" class="operator-btn">
           /
         </button>
-        <button onclick="appendToDisplay('0')">0</button>
+        <button id="zero" onclick="appendToDisplay('0')">0</button>
         <button id="decimal" onclick="appendToDisplay('.')">.</button>
         <button id="equals" onclick="calculate()">=</button>
-        <button id="display" onclick="clearDisplay()" class="operator-btn">
+        <button id="clear" onclick="clearDisplay()" class="operator-btn">
           C
         </button>
       </div>
