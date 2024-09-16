@@ -7,7 +7,7 @@ body {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   background-image: url("images/london-city.jpeg");
-  background-size: cover;
+  background-size: contain;
   background-position: top center;
   height: 100vh; /* Make body take the full height of the viewport */
   margin: 0;
