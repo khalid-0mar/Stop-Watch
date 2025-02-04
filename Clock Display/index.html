@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        background: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .clock,
+      .date {
+        color: #2fee45;
+        font-family: "Orbitron", sans-serif;
+        letter-spacing: 7px;
+      }
+      .clock {
+        font-size: 90px;
+      }
+      .date {
+        font-size: 30px;
+        margin-top: 10px;
+      }
+      .weather {
+        transform: translateX(-50%);
+        color: rgb(84, 205, 70);
+        font-size: 25px;
+        font-family: "Orbitron", sans-serif;
+        margin-top: 20px;
+        position: static;
+        margin-right: -170px;
+      }
+      h1 {
+        color: rgb(84, 205, 70);
+        font-size: 90px;
+        font-family: "Orbitron", sans-serif;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Wake up it's Time.........</h1>
+    <div id="MyClockDisplay" class="clock"></div>
+    <div id="MyDateDisplay" class="date"></div>
+    <div id="weatherDisplay" class="weather"></div>
+
+    <script>
+      function showTime() {
+        let date = new Date();
+        let h = date.getHours(); // 0-23
+        let m = date.getMinutes(); // 0-59
+        let s = date.getSeconds(); //0-59
+        let session = "AM";
+
+        if (h == 0) {
+          h = 12;
+        }
+        if (h > 12) {
+          h = h - 12;
+          session = "PM";
+        }
+
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+
+        let time = h + ":" + m + ":" + s + " " + session;
+        document.getElementById("MyClockDisplay").innerText = time;
+
+        // Get the date
+        let day = date.toLocaleDateString("en-us", { weekday: "long" });
+        let month = date.toLocaleDateString("en-us", { month: "long" });
+        let dayNum = date.getDate();
+        let year = date.getFullYear();
+
+        let currentDate = `${day}, ${month} ${dayNum}, ${year}`;
+        document.getElementById("MyDateDisplay").innerText = currentDate;
+
+        setTimeout(showTime, 1000);
+      }
+      const api = {
+        key: "260a359ad96a32322223c5272c3d1a18",
+        base: "https://api.openweathermap.org/data/2.5/",
+      }; // get weather
+
+      async function fetchWeather() {
+        const city = "London";
+        const url = `${api.base}weather?q=${city}&units=metric&APPID=${api.key}`;
+        try {
+          const response = await fetch(url);
+          const weatherData = await response.json();
+          console.log(weatherData);
+          displayWeather(weatherData);
+        } catch (error) {
+          console.error("Error fetching weather data:", error);
+          document.getElementById("weatherDisplay").innerText =
+            "Weather unavailable";
+        }
+      }
+      function displayWeather(weather) {
+        const temp = Math.round(weather.main.temp);
+        const condition = weather.weather[0].main;
+        const city = weather.name;
+        const weatherInfo = `${city}: ${temp}°C, ${condition}`;
+        document.getElementById("weatherDisplay").innerText = weatherInfo;
+      }
+
+      showTime();
+      fetchWeather();
+    </script>
+  </body>
+</html>

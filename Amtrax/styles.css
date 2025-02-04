@@ -1,0 +1,158 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 2vh;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+/* Style the logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the bars and the text */
+  font-family: Arial, sans-serif;
+}
+
+/* Style the bars */
+.logo-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bar {
+  width: 10px; /* Adjust width as needed */
+  background-color: #333; /* Dark color for the bars */
+}
+
+.bar bar1 {
+  height: 40px; /* Tallest bar */
+}
+
+.bar2 {
+  height: 30px; /* Medium bar */
+}
+
+.bar3 {
+  height: 20px; /* Shortest bar */
+}
+
+/* Style the text */
+.logo-text h1 {
+  font-size: 24px; /* Large text for AMTRAX */
+  font-weight: bold;
+  margin: 0;
+  color: #000;
+}
+
+.logo-text p {
+  font-size: 14px; /* Smaller text for the tagline */
+  margin: 0;
+  color: #555; /* Slightly lighter color */
+}
+
+nav {
+  background: #454343;
+  color: #454343;
+  padding: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #f6efef;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin-right: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 90px;
+  padding: 20px;
+  text-align: center;
+}
+section h2 {
+  font-size: 86px;
+}
+ul li {
+  text-align: left;
+}
+#consultancy h4 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+#consultancy article {
+  margin: 100px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #444;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}

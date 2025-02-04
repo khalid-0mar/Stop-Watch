@@ -1,5 +1,5 @@
 body {
-  background: rgb(208, 208, 242);
+  background: rgb(60, 60, 67);
 
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -26,15 +26,15 @@ p {
   color: #f4e31f;
 }
 #second {
-  color: #07771f;
+  color: #d0bf0b;
 }
 #third {
-  color: #3766cb;
+  color: #ced211;
   margin-bottom: 30px;
 }
 #enter {
   border: none;
-  padding: 5px 15px;
+  padding: 5px 25px;
   border-radius: 5px;
   color: #1d2021;
   background-color: #cfd2d4;
@@ -88,8 +88,8 @@ li > button {
   font-weight: 800;
 }
 input {
-  border-radius: 5px;
-  min-width: 65%;
+  border-radius: 15px;
+  min-width: 66%;
   padding: 5px;
   border: none;
 }
